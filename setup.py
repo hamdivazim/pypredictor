@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=['tensorflow', 'pandas', 'numpy'],
+    install_requires=['tensorflow', 'pandas', 'numpy', 'matplotlib', 'seaborn'],
     keywords=['python', 'prediction', 'ai'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

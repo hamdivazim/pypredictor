@@ -59,6 +59,8 @@ class NumPredictor:
         elif n_steps <= 0:
             _exceptions.exception(f"Inavlid n_steps value ({n_steps}). Cannot be zero or negative.", _exceptions.PyPredictorLengthOverflow)
         
+        if not all(isinstance(element, (int, float)) for element in sequence):
+            _exceptions.exception("All elements in the sequence must be numbers.", _exceptions.PyPredictorInavlidDataType)
 
         x, y = self._prepare_data(sequence, n_steps)
 

@@ -8,6 +8,8 @@ _exceptions.py - exceptions
 
 class PyPredictorLengthOverflow(Exception): pass
 class PyPredictorIncorrectColumns(Exception): pass
+class PyPredictorDataNotFound(Exception): pass
+class PyPredictorInavlidDataType(Exception): pass
 
 def exception(msg, type):
     raise type(msg)
