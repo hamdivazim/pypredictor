@@ -1,3 +1,11 @@
+"""
+pypredictor 0.1.0
+
+© Hamd Waseem under the Apache Licence 2.0
+
+pypredictor_test_setup.py - test setup to allow access to previous directory
+"""
+
 import sys
 import os
 

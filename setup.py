@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.0.0'
+VERSION = '0.1.0'
 DESCRIPTION = 'A Python library that can predict the next values in a list.'
 LONG_DESCRIPTION = 'A Python library that can predict the next values in a list. (long desc here)'
 
@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=['torch'],
+    install_requires=['tensorflow', 'pandas', 'numpy'],
     keywords=['python', 'prediction', 'ai'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
