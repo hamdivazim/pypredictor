@@ -47,12 +47,12 @@ class NumGraph:
 
         return plot
     
-    def predict(self, n, n_steps=5):
+    def predict(self, n, n_steps=5, epochs=500):
         """ Predicts based on given data and returns a catplot with new data. """
 
-        pred = numpredict.NumPredictor()
+        pred = numpredict.NumPredictor(epochs)
         results = pred.predict(pred, n, n_steps)
-        
+
         self.generated = results
 
         df = pd.DataFrame({"data":results})
