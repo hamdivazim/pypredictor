@@ -4,7 +4,6 @@ VERSION = '0.1.0'
 DESCRIPTION = 'A Python library that can predict the next values in a list.'
 LONG_DESCRIPTION = 'A Python library that can predict the next values in a list. (long desc here)'
 
-# Setting up
 setup(
     name="pypredictor",
     version=VERSION,
