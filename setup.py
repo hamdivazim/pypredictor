@@ -17,7 +17,7 @@ setup(
     install_requires=['tensorflow', 'pandas', 'numpy', 'matplotlib', 'seaborn'],
     keywords=['python', 'prediction', 'ai'],
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
