@@ -1,0 +1,7 @@
+contact_links:
+  - name: Community Support
+    url: https://github.com/hamdivazim/pypredictor/discussions
+    about: Ask and answer questions here.
+  - name: Bug Hunt
+    url: https://github.com/hamdivazim/pypredictor/security/advisories/new
+    about: Report security vulnerabilities here.
