@@ -1,5 +1,5 @@
 """
-pypredictor 0.1.0
+pypredictor 0.1.1
 
 © Hamd Waseem under the Apache Licence 2.0
 
@@ -9,8 +9,8 @@ numgraph.py - Using `NumPredictor`, generates a seaborn plot.
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpredict
-import _exceptions
+from . import numpredict
+from . import _exceptions
 
 class NumGraph:
     """ Base class for generating seaborn plots. """

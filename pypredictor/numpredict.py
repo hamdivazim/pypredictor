@@ -1,5 +1,5 @@
 """
-pypredictor 0.1.0
+pypredictor 0.1.1
 
 © Hamd Waseem under the Apache Licence 2.0
 
@@ -9,7 +9,7 @@ numpredict.py - Predicts the next n numbers in a list.
 import logging
 import numpy as np
 import pandas as pd
-import _exceptions
+from . import _exceptions
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM
 

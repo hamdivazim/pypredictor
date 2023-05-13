@@ -1,9 +1,9 @@
 """
-pypredictor 0.1.0
+pypredictor 0.1.1
 
 © Hamd Waseem under the Apache Licence 2.0
 
-__init__.py - initialisation
+The Python library that makes AI predictions simple.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
