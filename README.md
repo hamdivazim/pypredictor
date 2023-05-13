@@ -29,6 +29,9 @@ pypredictor also has the ability to generate a pandas DataFrame and a seaborn li
 ###
 Plus, there are examples in the `examples/` directory, so you can take a look for yourself :)
 
+## How to use
+There are examples for both packages `numpredict` and `numgraph` in the `examples/` directory which you can `git clone` as shown below.
+
 ## How to install
 Install via pip:
 ```
