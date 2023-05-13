@@ -11,7 +11,6 @@
   <img src="https://img.shields.io/badge/PyPi package-0.1.0-green.svg" alt="pypi version">
   <img src="https://img.shields.io/badge/License-Apache License 2.0-green.svg" alt="license">
   <img src="https://img.shields.io/badge/Libraries-tensorflow | numpy | seaborn | pandas-green.svg" alt="libs">
-  <img src="https://img.shields.io/badge/tests-all passing-green.svg" alt="tests">
 </p>
 
 The Python library that makes AI predictions simple.
@@ -35,3 +34,12 @@ Install via pip:
 ```
 $ pip install pypredictor
 ```
+To get examples, clone this repository and enter `pypredictor/examples`:
+```
+$ git clone https://github.com/hamdivazim/pypredictor.git
+$ cd pypredictor/examples
+```
+anaconda support hopefully coming soon!
+
+## License
+pypredictor is licensed by Hamd Waseem (codingboy_CW) under [the Apache License 2.0](https://github.com/hamdivazim/pypredictor/blob/main/LICENSE).
