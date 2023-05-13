@@ -8,7 +8,7 @@
 # pypredictor 0.1.1
 <p>
   <img src="https://img.shields.io/badge/Python-3.8 | 3.9 | 3.10 | 3.11 -blue.svg" alt="py versions">
-  <img src="https://img.shields.io/badge/PyPi package-0.1.0-green.svg" alt="pypi version">
+  <img src="https://img.shields.io/badge/PyPi package-0.1.1-green.svg" alt="pypi version">
   <img src="https://img.shields.io/badge/License-Apache License 2.0-green.svg" alt="license">
   <img src="https://img.shields.io/badge/Libraries-tensorflow | numpy | seaborn | pandas-green.svg" alt="libs">
 </p>
