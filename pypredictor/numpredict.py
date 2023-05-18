@@ -51,43 +51,49 @@ class NumPredictor:
         """ Sets amount of epochs to be used """
         self.epochs = new
 
-    def predict(self, sequence: list, n: int, n_steps=5):
-        """ Predicts the next n elements in the provided list. """
+def predict(self, sequence: list, n: int, n_steps=5):
+    """ Predicts the next n elements in the provided list. """
 
-        if n_steps >= len(sequence):
-            _exceptions.exception(f"Inavlid n_steps value ({n_steps}). Cannot be equal to or more than sequence length.", _exceptions.PyPredictorLengthOverflow)
-        elif n_steps <= 0:
-            _exceptions.exception(f"Inavlid n_steps value ({n_steps}). Cannot be zero or negative.", _exceptions.PyPredictorLengthOverflow)
-        
-        if not all(isinstance(element, (int, float)) for element in sequence):
-            _exceptions.exception("All elements in the sequence must be numbers.", _exceptions.PyPredictorInavlidDataType)
+    if n_steps >= len(sequence):
+        _exceptions.exception(f"Inavlid n_steps value ({n_steps}). Cannot be equal to or more than sequence length.", _exceptions.PyPredictorLengthOverflow)
+    elif n_steps <= 0:
+        _exceptions.exception(f"Inavlid n_steps value ({n_steps}). Cannot be zero or negative.", _exceptions.PyPredictorLengthOverflow)
+    
+    if not all(isinstance(element, (int, float)) for element in sequence):
+        _exceptions.exception("All elements in the sequence must be numbers.", _exceptions.PyPredictorInavlidDataType)
 
-        x, y = self._prepare_data(sequence, n_steps)
+    x, y = self._prepare_data(sequence, n_steps)
 
-        # Reshape the input data for the LSTM model (samples, time steps, features)
-        n_samples = x.shape[0]
-        n_features = 1
-        x = x.reshape((n_samples, n_steps, n_features))
+    # Reshape the input data for the LSTM model (samples, time steps, features)
+    n_samples = x.shape[0]
+    n_features = 1
+    x = x.reshape((n_samples, n_steps, n_features))
 
-        # Build the LSTM model
-        model = Sequential()
-        model.add(LSTM(50, activation='relu', input_shape=(n_steps, n_features)))
-        model.add(Dense(1))
-        model.compile(optimizer='adam', loss='mse')
+    # Build the LSTM model
+    model = Sequential()
+    model.add(LSTM(50, activation='relu', input_shape=(n_steps, n_features)))
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
 
-        # Train the model
-        model.fit(x, y, epochs=self.epochs, verbose=0)
+    # Train the model
+    model.fit(x, y, epochs=self.epochs, verbose=0)
 
-        # Generate the next n numbers
-        last_sequence = sequence[-n_steps:]
-        generated = []
-        for _ in range(n):
-            x = np.array(last_sequence[-n_steps:]).reshape((1, n_steps, n_features))
-            pred = model.predict(x)[0][0]
-            generated.append(pred)
-            last_sequence.append(pred)
+    # Generate the next n numbers
+    last_sequence = sequence[-n_steps:]
+    generated = []
+    for _ in range(n):
+        x = np.array(last_sequence[-n_steps:]).reshape((1, n_steps, n_features))
+        pred = model.predict(x)[0][0]
 
-        return generated
+        if all(isinstance(element, int) for element in sequence):
+            # If original values were integers, round the prediction
+            pred = round(pred)
+
+        generated.append(pred)
+        last_sequence.append(pred)
+
+    return generated
+
     
     def predict_dataframe(self, df: pd.DataFrame, column: str, n: int, n_steps=5):
         if  df.shape[1] != 1:
