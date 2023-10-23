@@ -45,4 +45,4 @@ $ cd pypredictor/examples
 anaconda support hopefully coming soon!
 
 ## License
-pypredictor is licensed by Hamd Waseem (codingboy_CW) under [the Apache License 2.0](https://github.com/hamdivazim/pypredictor/blob/main/LICENSE).
+pypredictor is licensed by Hamd Waseem (hamdivazim) under [the Apache License 2.0](https://github.com/hamdivazim/pypredictor/blob/main/LICENSE).
